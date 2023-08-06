@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 1rem;">Weatherly.</h1>
+        <div class="search">
+            <input type="text" class="search-box" placeholder="Enter location">
+            <button class="submit-button" onclick="submitHandler()">Search</button>
+        </div>
+
+        <main class="weather" style="display: none;">
+            <div class="location-info">
+                <h1 class="current-temperature temp-celsius"></h1>
+                <h1 class="current-temperature temp-fahrenheit" style="display: none;"></h1>
+                <div class="location">
+                    <h2 class="city"></h2>
+                    <p class="country"></p>
+                </div>
+            </div>
+
+            <div class="condition">
+                <img class="condition-img">
+                <h2 class="condition-text"></h2>
+            </div>
+
+            <div class="others">
+                <p class="current-humidity"></p>
+                <p class="current-windspeed-kmh"></p>
+            </div>
+        </main>
+
+        <div class="forecast">
+
+            <div class="hourly">
+                <div class="title">
+                    <h3>Hourly forecast</h3>
+                    <img src="./statics/dropdown.png" class="arrow">
+                </div>
+
+                <section class="hourly-container hidden">Coming soon</section>
+            </div>
+
+            <div class="misc">
+                <h3>Miscellaneous</h3>
+                <div class="row">
+                    <p>Maximum temperature</p>
+                    <div class="max-temp"></div>
+                </div>
+                <div class="row">
+                    <p>Minimum temperature</p>
+                    <div class="min-temp"></div>
+                </div>
+                <div class="row">
+                    <p>Average temperature</p>
+                    <div class="avg-temp"></div>
+                </div>
+                <div class="row">
+                    <p>Average humidity</p>
+                    <div class="avg-humidity"></div>
+                </div>
+                <div class="row">
+                    <p>Chance of rain</p>
+                    <div class="rain-chance"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer" style="display: none;">Developed by Nehan Yaser</div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
