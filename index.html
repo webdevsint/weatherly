@@ -4,15 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather</title>
-    <link rel="stylesheet" href="index.css">
+    <!-- Primary Meta Tags -->
+    <title>Weatherly -- weather reports</title>
+    <meta name="title" content="Weatherly -- weather reports" />
+    <meta name="description" content="Your complete weather forecast solution." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webdevsint.github.io/weatherly/" />
+    <meta property="og:title" content="Weatherly -- weather reports" />
+    <meta property="og:description" content="Your complete weather forecast solution." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://webdevsint.github.io/weatherly/" />
+    <meta property="twitter:title" content="Weatherly -- weather reports" />
+    <meta property="twitter:description" content="Your complete weather forecast solution." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
+    <div class="loader">Looking outside your window</div>
     <div class="container">
-        <h1 style="margin-bottom: 1rem;">Weatherly.</h1>
+        <h1 style="margin-bottom: 1rem;">Weatherly</h1>
         <div class="search">
-            <input type="text" class="search-box" placeholder="Enter location">
+            <input type="text" class="search-box" placeholder="Enter location" required>
             <button class="submit-button" onclick="submitHandler()">Search</button>
         </div>
 
@@ -45,7 +65,7 @@
                     <img src="./statics/dropdown.png" class="arrow">
                 </div>
 
-                <section class="hourly-container hidden">Coming soon</section>
+                <section class="hourly-container hidden"></section>
             </div>
 
             <div class="misc">
@@ -71,8 +91,23 @@
                     <div class="rain-chance"></div>
                 </div>
             </div>
+
+            <div class="future-forecast">
+                <h3>Tomorrow's weather</h3>
+
+                <div class="condition" style="padding: calc(.5rem + 5px) 0;">
+                    <img class="future-condition-img">
+                    <h2 class="future-condition-text"></h2>
+                </div>
+
+                <div>
+                    <div class="future-temp"></div>
+                    <p class="future-humidity"></p>
+                    <p class="future-chance-of-rain"></p>
+                </div>
+            </div>
         </div>
-    
+
         <div class="footer" style="display: none;">Developed by Nehan Yaser</div>
     </div>
     <script src="./scripts/index.js"></script>
