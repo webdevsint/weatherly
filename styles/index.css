@@ -192,6 +192,10 @@ h1,
 }
 
 @media print {
+  .container {
+    width: 100%;
+  }
+
   .search,
   .arrow {
     display: none;
@@ -199,5 +203,9 @@ h1,
 
   .hidden {
     display: block;
+  }
+
+  .footer {
+    margin-top: 1rem;
   }
 }

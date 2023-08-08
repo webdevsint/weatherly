@@ -110,7 +110,7 @@ const submitHandler = () => {
 
         document.querySelector(
           ".future-temp"
-        ).innerHTML = `Temperature: ${forecast.day.avgtemp_c}°C / ${forecast.day.avgtemp_f}°F`;
+        ).innerHTML = `Temperature: ${Math.round(forecast.day.avgtemp_c)}°C / ${Math.round(forecast.day.avgtemp_f)}°F`;
         document.querySelector(
           ".future-humidity"
         ).innerHTML = `Humidity: ${forecast.day.avghumidity}%`;
@@ -156,7 +156,7 @@ window.onbeforeprint = () => {
 };
 
 window.onafterprint = () => {
-  document.querySelector("h1").innerHTML = "Weatherly.";
+  document.querySelector("h1").innerHTML = "Weatherly";
 };
 
 // preloader handler
